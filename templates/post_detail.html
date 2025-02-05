@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <small>Posted on: {{ post.date_posted }}</small>
+    <br><br>
+    <a href="{% url 'post_update' post.id %}">Edit</a> |
+    <a href="{% url 'post_delete' post.id %}">Delete</a> |
+    <a href="{% url 'post_list' %}">Back to Posts</a>
+</body>
+</html>
